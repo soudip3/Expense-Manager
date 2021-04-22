@@ -1,5 +1,5 @@
 import './App.css';
-import Expenses from './Components/Expenses'
+import Expenses from './Components/Expenses/Expenses'
 const expenses = [
   {
     id : 1,
@@ -16,7 +16,7 @@ const expenses = [
 ]
   
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <h1>This is First React Project</h1>
