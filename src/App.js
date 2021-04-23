@@ -1,5 +1,6 @@
 import './App.css';
 import Expenses from './Components/Expenses/Expenses'
+import NewExpense from './Components/NewExpense/NewExpense'
 const expenses = [
   {
     id : 1,
@@ -14,13 +15,14 @@ const expenses = [
     expenseAmount : '$449.00'
   }
 ]
-  
+
 
 const App = () => {
   return (
     <div className="App">
       <h1>This is First React Project</h1>
-      <Expenses expense = {expenses}></Expenses>
+      <NewExpense></NewExpense>
+      <Expenses expense = {expenses} ></Expenses>
     </div>
   );
 }
