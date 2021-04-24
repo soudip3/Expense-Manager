@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Expenses from './Components/Expenses/Expenses'
 import NewExpense from './Components/NewExpense/NewExpense'
-const expenses = [
+const DUMMY_EXPENSES = [
   {
     id : 1,
     expenseDate : new Date(2020,2,27),
@@ -17,11 +17,16 @@ const expenses = [
   }
 ]
 
-const saveExpense = (expenseData) => {
-  expenses([...expenses, expenseData]) 
-}
 
 const App = () => {
+
+  const [expenses, setExpensesData] = useState(DUMMY_EXPENSES)
+
+  const saveExpense = (expenseData) => {
+    setExpensesData((prevExpenses)=>{
+      return ([...prevExpenses,expenseData])
+    })
+  }
 
   return (
     <div className="App">

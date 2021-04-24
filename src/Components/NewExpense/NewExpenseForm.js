@@ -40,9 +40,10 @@ const NewExpenseForm = (props) => {
         event.preventDefault();
 
         const ExpenseData = {
-            product : enteredProduct,
-            amount : enteredAmount,
-            date : new Date(enteredDate)
+            expenseProduct : enteredProduct,
+            expenseAmount : enteredAmount,
+            expenseDate : new Date(enteredDate),
+            id: (Math.random()*100).toString()
         }
 
         props.saveExpenseData(ExpenseData)
