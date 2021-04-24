@@ -15,7 +15,7 @@ const ExpenseItems = props => {
             <ExpenseDate date={props.date}></ExpenseDate>
             <div className="expense-item__description">
                 <h2>{product}</h2>
-                <div className="expense-item__price">{props.amount}</div>
+                <div className="expense-item__price">${props.amount}</div>
             </div>
             <button onClick = {onClickHandler}>Change Product name</button>
         </Card>
