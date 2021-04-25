@@ -50,6 +50,11 @@ const NewExpenseForm = (props) => {
         setEnteredProduct('')
         setEnteredAmount('')
         setEnteredDate('')
+        props.stopEditing()
+    }
+
+    const onClickHandler = () => {
+        props.stopEditing()
     }
 
     return(
@@ -57,18 +62,19 @@ const NewExpenseForm = (props) => {
             <div className = "new-expense__controls">
                 <div className = "new-expense__control">
                     <label className>Product</label>
-                    <input type="text" value={enteredProduct} onChange={onChangeHanlderProduct}></input>
+                    <input type="text" required value={enteredProduct} onChange={onChangeHanlderProduct}></input>
                 </div>
                 <div className = "new-expense__control">
                     <label className>Amount</label>
-                    <input type="number" value={enteredAmount} onChange={onChangeHanlderAmount}></input>
+                    <input type="number" required value={enteredAmount} onChange={onChangeHanlderAmount}></input>
                 </div>
                 <div className = "new-expense__control">
                     <label className>Date</label>
-                    <input type="date" value={enteredDate} onChange = {onChangeHanlderDate}></input>
+                    <input type="date" required value={enteredDate} onChange = {onChangeHanlderDate}></input>
                 </div>
             </div>
             <div className = "new-expense__actions">
+                <button type="button" onClick={onClickHandler}>Cancel</button>
                 <button type="submit"> Add Expense </button>
             </div>
         </form>
