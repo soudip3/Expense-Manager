@@ -43,7 +43,7 @@ const NewExpenseForm = (props) => {
             expenseProduct : enteredProduct,
             expenseAmount : enteredAmount,
             expenseDate : new Date(enteredDate),
-            id: (Math.random()*100).toString()
+            id: Math.random().toString()
         }
 
         props.saveExpenseData(ExpenseData)
@@ -61,7 +61,7 @@ const NewExpenseForm = (props) => {
                 </div>
                 <div className = "new-expense__control">
                     <label className>Amount</label>
-                    <input type="number" value={enteredAmount} min="0" onChange={onChangeHanlderAmount}></input>
+                    <input type="number" value={enteredAmount} onChange={onChangeHanlderAmount}></input>
                 </div>
                 <div className = "new-expense__control">
                     <label className>Date</label>
