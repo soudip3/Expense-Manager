@@ -7,13 +7,13 @@ const DUMMY_EXPENSES = [
     id : 1,
     expenseDate : new Date(2020,2,27),
     expenseProduct : 'Laptop',
-    expenseAmount : '999.00'
+    expenseAmount : 999.00
   },
   {
     id : 2,
     expenseDate : new Date(2021,1,27),
     expenseProduct : 'PC',
-    expenseAmount : '449.00'
+    expenseAmount : 449.00
   }
 ]
 

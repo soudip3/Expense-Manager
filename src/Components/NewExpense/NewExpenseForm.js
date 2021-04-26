@@ -41,7 +41,7 @@ const NewExpenseForm = (props) => {
 
         const ExpenseData = {
             expenseProduct : enteredProduct,
-            expenseAmount : enteredAmount,
+            expenseAmount : +enteredAmount,
             expenseDate : new Date(enteredDate),
             id: Math.random().toString()
         }
